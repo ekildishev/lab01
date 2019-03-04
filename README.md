@@ -15,7 +15,7 @@ $ export GITHUB_USERNAME=ekildishev # Замена GITHUB_USERNAME на имя �
 $ export GIST_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # Замена GIST_TOKEN на название токена
 $ alias edit=nano # Замена edit на nano
 ```
-
+Создание папки с рабочей областью
 ```ShellSession
 $ mkdir -p ${GITHUB_USERNAME}/workspace # Создание директории с указанным адресом
 $ cd ${GITHUB_USERNAME}/workspace # Изменение директории
@@ -23,45 +23,45 @@ $ pwd # Адрес
 $ cd .. # Подъем на одну папку
 $ pwd # Адрес
 ```
-
+Создание папки в рабочей области
 ```ShellSession
-$ mkdir -p workspace/tasks/ # Создание директории заданий
-$ mkdir -p workspace/projects/ # Создание директории проектов
-$ mkdir -p workspace/reports/ # Создание директории отчетов
-$ cd workspace # Редактирование
+$ mkdir -p workspace/tasks/ # Создание папки заданий
+$ mkdir -p workspace/projects/ # Создание папки проектов
+$ mkdir -p workspace/reports/ # Создание папки отчетов
+$ cd workspace # Переход в папку
 ```
-
+Скачивание и распаковка node js
 ```ShellSession
 # Debian
-$ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
-$ tar -xf node-v6.11.5-linux-x64.tar.xz
-$ rm -rf node-v6.11.5-linux-x64.tar.xz
-$ mv node-v6.11.5-linux-x64 node
+$ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz # Скачивание файла
+$ tar -xf node-v6.11.5-linux-x64.tar.xz # Разархивирование файла
+$ rm -rf node-v6.11.5-linux-x64.tar.xz # Удаление архива
+$ mv node-v6.11.5-linux-x64 node # Переименование папки
 ```
-
+Добавление пути к node js
 ```ShellSession
-$ ls node/bin
-$ echo ${PATH}
-$ export PATH=${PATH}:`pwd`/node/bin
-$ echo ${PATH}
-$ mkdir scripts
-$ cat > scripts/activate<<EOF
-export PATH=\${PATH}:`pwd`/node/bin
-EOF
-$ source scripts/activate
+$ ls node/bin # Вывод директории и файлов в папке
+$ echo ${PATH} # Вывод переменной окружения
+$ export PATH=${PATH}:`pwd`/node/bin # Добавление в PATH путь к node js
+$ echo ${PATH} # Вывод переменной окружения
+$ mkdir scripts # Создание папки
+$ cat > scripts/activate<<EOF # Запись строки в файл
+export PATH=\${PATH}:`pwd`/node/bin #
+EOF #
+$ source scripts/activate # Выполнение скрипта
 ```
-
+Установка пакета gistup в node js
 ```ShellSession
-$ npm install -g gistup
-$ ls node/bin
+$ npm install -g gistup # Установка
+$ ls node/bin # Вывод директорий и файлов
 ```
-
+Настройка модуля gistup
 ```ShellSession
-$ cat > ~/.gistup.json <<EOF
+$ cat > ~/.gistup.json <<EOF # Запись текста в файл
 {
-  "token": "${GIST_TOKEN}"
+  "token": "${GIST_TOKEN}" 
 }
-EOF
+EOF 
 ```
 
 ## Report
