@@ -4,31 +4,31 @@
 
 ## Tasks
 
-- [ ] 1. Ознакомиться со ссылками учебного материала
-- [ ] 2. Выполнить инструкцию учебного материала
-- [ ] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
+- [x] 1. Ознакомиться со ссылками учебного материала
+- [x] 2. Выполнить инструкцию учебного материала
+- [x] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
 
 ## Tutorial
-
+Автозамены
 ```bash
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GIST_TOKEN=<сохраненный_токен>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=ekildishev # Замена GITHUB_USERNAME на имя пользователя
+$ export GIST_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # Замена GIST_TOKEN на название токена
+$ alias edit=nano # Замена edit на nano
 ```
 
 ```ShellSession
-$ mkdir -p ${GITHUB_USERNAME}/workspace
-$ cd ${GITHUB_USERNAME}/workspace
-$ pwd
-$ cd ..
-$ pwd
+$ mkdir -p ${GITHUB_USERNAME}/workspace # Создание директории с указанным адресом
+$ cd ${GITHUB_USERNAME}/workspace # Изменение директории
+$ pwd # Адрес
+$ cd .. # Подъем на одну папку
+$ pwd # Адрес
 ```
 
 ```ShellSession
-$ mkdir -p workspace/tasks/
-$ mkdir -p workspace/projects/
-$ mkdir -p workspace/reports/
-$ cd workspace
+$ mkdir -p workspace/tasks/ # Создание директории заданий
+$ mkdir -p workspace/projects/ # Создание директории проектов
+$ mkdir -p workspace/reports/ # Создание директории отчетов
+$ cd workspace # Редактирование
 ```
 
 ```ShellSession
